@@ -1,18 +1,109 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <title>Front End-Dream Team</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dream Team Homepage</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Source+Sans+Pro:300,400,600,700&display=swap">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico">
 </head>
 
 <body>
 
+    <header>
 
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="script.js"></script>
+        <div class="container-md pt-4">
+            <img id="logo" src="https://global-uploads.webflow.com/5bdcb526f9587ab1d3372e01/5c391791e94f98768f9e1a1d_dream_team_logo_blue.png" alt="Logo">
+        </div>
+
+        <!--========== DATE & TIME ==========-->
+
+        <div class="row date my-2">
+
+            <div class="col-6">
+                <a><span id="currentDay">DATE</span></a><br>
+            </div>
+
+            <div class="col-6">
+                <a><span id="currentHour">TIME</span></a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!--========== CORONA VIRUS & WEATHER GIP ==========-->
+
+
+        <article class="row live">
+
+            <section class="col-md-8">
+                Covid
+
+
+            </section>
+
+            <section class="col-md-4">
+                Weather
+
+
+            </section>
+
+        </article>
+
+
+        <!--========== NEWS ARTICLES ==========-->
+
+
+        <article class="row news">
+
+            <section class="col-md">
+                News
+
+
+            </section>
+
+        </article>
+
+
+        <!--========== TRAVEL FORM & GOOGLE MAP ==========-->
+
+
+        <article class="row travel">
+
+            <section class="col-md-6">
+                Travel Form
+
+
+            </section>
+
+            <section class="col-md-6">
+                Google Map
+
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <!--========== SCRIPTS ==========-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="assets/script.js"></script>
+
 </body>
+
+</html>

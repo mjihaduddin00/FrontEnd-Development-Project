@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    /* background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://wallpapershome.com/images/wallpapers/switzerland-3840x2160-4k-5k-wallpaper-alps-mountains-stars-night-5713.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center; */
+    background-color: #151728;
+    position: relative;
+    height: 160vh;
+    color: #ccc8db;
+    width: 1170px;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*------------Header CSS------------*/
+
+header {
+    height: 10vh;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+.date {
+    /* border: 1px solid #272a3a; */
+}
+
+
+
+/*------------Main CSS------------*/
+
+section {
+    background-color: #151728;
+    border: 1px solid #272a3a;
+    height: 50vh;
+}
+
+
+
+
+/*------------Original CSS------------*/
+
+/* .wrapper {
+    width: 1170px;
+    margin: auto;
+}
+
+.nav-area {
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.nav-area li {
+    display: inline-block;
+}
+
+.nav-area li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.nav-area li a:hover {
+    background: #fff;
+    color: #333;
+}
+
+.welcome-text {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
+}
+
+.welcome-text h1 {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.welcome-text h3 {
+    text-align: center;
+    color: #fff;
+}
+
+.welcome-text a {
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+}
+
+.welcome-text a:hover {
+    background: #fff;
+    color: #333;
+} */
