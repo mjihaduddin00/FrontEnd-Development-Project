@@ -13,7 +13,7 @@ body {
     position: relative;
     height: 160vh;
     color: #ccc8db;
-    width: 1170px;
+    width: 1100px;
     text-align: center;
     margin: auto;
 }
@@ -44,8 +44,11 @@ section {
     height: 50vh;
 }
 
-
-
+.title {
+    background-color: #151728;
+    border: 1px solid #272a3a;
+    /* height: 5vh; */
+}
 
 /*------------Original CSS------------*/
 
