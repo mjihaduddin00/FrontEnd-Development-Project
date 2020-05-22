@@ -49,9 +49,26 @@
                 <div class="row">
 
                     <section class="col-md-8">
-                        Covid - CODE HERE
-
-
+                        <div class="container">
+                            <h1 class="text-center mt-5">Live Data: COVID-19</h1>
+                            <br>
+                            <table class="table">
+                                <thead class="thead-dark text-center">
+                                    <tr>
+                                        <th scope="col">Total Cases</th>
+                                        <th scope="col">Total Deaths</th>
+                                        <th scope="col">Total Recovered</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <tr id="data" style="text-align: center;">
+                                  </tr>
+                                </tbody>
+                            </table>
+                            <button id="refreshCovid" class="btn btn-danger btn-block">
+                                Refresh Data
+                            </button>
+                        </div>
                     </section>
 
                     <section class="col-md-4">
@@ -125,6 +142,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="assets/script.js"></script>
 
