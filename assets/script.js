@@ -55,3 +55,58 @@ $(document).ready(function(){
 });
 
 //======================= AP NAME AND CODE BELOW =======================//
+//news api
+$(document).ready(function() {
+    var mainInfo = "";
+    var listInfo = "";
+    var articles = [];
+    $.ajax({
+        url: "https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=82b9aacd881f4e4e90a4b7b4eaf75ae3",
+        method: "GET"
+    }).then(function (data) {
+        console.log(data);
+        articles = data.articles;
+        displayStory(articles[0],0);
+        $("#newest").html(mainInfo);
+
+        for(var x =1; x < 5; x++) {
+            displayList(articles[x],x);
+            $("#list").html(listInfo);
+        }
+        
+    })
+
+    function displayStory(story,storyNum){
+        var mainNumber = storyNum;
+        var mainTitle = "<h4>" + story.title + "</h4>";
+        var mainSource = story.source.name;
+        var mainImage = story.urlToImage;
+        var mainTime = moment(story.publishedAt).format('MMMM Do, YYYY');
+        var mainDescription = story.description;
+
+        mainInfo += mainNumber;
+        mainInfo += "<img src='" + mainImage + "' width='400'/>";
+        mainInfo += `<a href='${story.url}'>`;
+        mainInfo += "<strong>" + mainTitle + "</strong></a>";
+        mainInfo += "<br/>" + "<p class='wrap'>" + mainDescription + "</p>";
+        mainInfo += `<a href='${story.url}'>`;
+        mainInfo +=  mainTime + " | Read more at " + mainSource + "</a>";
+    }
+
+    function displayList(story,storyNum){
+        var number = storyNum;
+        var title = story.title;
+        var source = story.source.name;
+        var image = story.urlToImage;
+        var storyTime = moment(story.publishedAt).format('MMMM Do, YYYY');
+
+        listInfo += "<li onclick='populateDetail(" + number + ")' class='wrap'>";
+        listInfo += "<img src='" + image + "' width='100'/>";
+        listInfo += `<a href='${story.url}'>`;
+        listInfo += "<strong>" + title + "</strong>";
+        listInfo += "<br/>" + storyTime + " | Read more at " + source;
+        listInfo += "</a></li>";
+    }
+
+
+});
