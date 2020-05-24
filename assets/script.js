@@ -12,7 +12,6 @@ $(document).ready(function() {
 
 });
 
-
 //======================= Covid Tracker =======================//
 
 $(document).ready(function(){
@@ -26,7 +25,7 @@ $(document).ready(function(){
             console.log(data.Global)
 
             data = `
-            
+
             <td>${data.Global.TotalConfirmed}</td>
             <td>${data.Global.TotalDeaths}</td>
             <td>${data.Global.TotalRecovered}</td>
@@ -54,12 +53,13 @@ $(document).ready(function(){
     })
 });
 
-//======================= AP NAME AND CODE BELOW =======================//
-//news api
+//======================= NEWS API =======================//
+
 $(document).ready(function() {
     var mainInfo = "";
     var listInfo = "";
     var articles = [];
+
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=82b9aacd881f4e4e90a4b7b4eaf75ae3",
         method: "GET"
@@ -73,7 +73,7 @@ $(document).ready(function() {
             displayList(articles[x],x);
             $("#list").html(listInfo);
         }
-        
+
     })
 
     function displayStory(story,storyNum){
@@ -85,7 +85,7 @@ $(document).ready(function() {
         var mainDescription = story.description;
 
         mainInfo += mainNumber;
-        mainInfo += "<img src='" + mainImage + "' width='400'/>";
+        mainInfo += "<img src='" + mainImage + "' width='522'/>";
         mainInfo += `<a href='${story.url}'>`;
         mainInfo += "<strong>" + mainTitle + "</strong></a>";
         mainInfo += "<br/>" + "<p class='wrap'>" + mainDescription + "</p>";

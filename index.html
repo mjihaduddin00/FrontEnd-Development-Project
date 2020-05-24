@@ -13,65 +13,73 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico">
 </head>
 
-<body>
+<body class="container-fluid">
 
     <header>
         <!--========== PAGE HEADER LOGO ==========-->
 
-        <div class="container-md pt-4">
+        <article class="container-md pt-4 pb-2 cover">
             <img id="logo" src="https://global-uploads.webflow.com/5bdcb526f9587ab1d3372e01/5c391791e94f98768f9e1a1d_dream_team_logo_blue.png" alt="Logo">
-        </div>
+        </article>
 
         <!--========== DATE & TIME ==========-->
 
-        <div class="row date my-2">
+        <article class="container-md">
+            <hr>
+            <div class="container-sm time-date">
+                <div class="row">
 
-            <div class="col-6">
-                <a><span id="currentDay">DATE</span></a><br>
+                    <div class="col-4">
+                        <a><span id="currentDay">DATE</span></a>
+                    </div>
+
+                    <div class="col-4">
+                        <a>Welcome to our Homepage</a>
+                    </div>
+
+                    <div class="col-4">
+                        <a><span id="currentHour">TIME</span></a>
+                    </div>
+
+                </div>
             </div>
-
-            <div class="col-6">
-                <a><span id="currentHour">TIME</span></a>
-            </div>
-
-        </div>
-
+            <hr>
+        </article>
     </header>
 
     <main>
 
         <!--========== CORONA VIRUS & WEATHER GIP ==========-->
 
-        <article class="container-md live">
+        <article class="container-md">
 
             <!-- COVID & WEATHER CONTAINER-->
-            <div class="container-md">
+            <div class="container-md live">
                 <div class="row">
 
-                    <section class="col-md-8">
-                        <div class="container">
-                            <h1 class="text-center mt-5">Live Data: COVID-19</h1>
-                            <br>
+                    <section class="col-md-8 pr-4 corona">
+                        <div class="container mt-4 mb-4 p-3 covid-data">
+                            <h2 class="text-center mb-2">Live Data: COVID-19</h2>
                             <table class="table">
                                 <thead class="thead-dark text-center">
                                     <tr>
-                                        <th scope="col">Total Cases</th>
-                                        <th scope="col">Total Deaths</th>
-                                        <th scope="col">Total Recovered</th>
+                                        <th scope="col">Cases</th>
+                                        <th scope="col">Deaths</th>
+                                        <th scope="col">Recovered</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  <tr id="data" style="text-align: center;">
-                                  </tr>
+                                    <tr id="data"></tr>
                                 </tbody>
                             </table>
                             <button id="refreshCovid" class="btn btn-danger btn-block">
                                 Refresh Data
                             </button>
                         </div>
+
                     </section>
 
-                    <section class="col-md-4">
+                    <section class="col-md-4 weather">
                         Weather - CODE HERE
 
 
@@ -85,7 +93,7 @@
         <!--========== NEWS ARTICLES ==========-->
 
 
-        <article class="container-md news">
+        <article class="container-md">
 
             <!-- Section Title -->
             <div class="container-md mt-3 title">
@@ -93,25 +101,22 @@
             </div>
 
             <!-- NEWS CONTAINER-->
-            <div class="container-md articles">
+
+            <section class="container-md articles">
                 <div class="row">
-                    <div class="col-md-6" id="main">
-                        <div id="newest">
-                            
-                        </div>
+
+                    <div class="col-md-6 p-3" id="main">
+                        <div id="newest"></div>
                     </div>
-                
-            
-                    <div class="col-md-6" id="listings">
+
+                    <div class="col-md-6 p-3" id="listings">
                         <ul id="list" data-role="listview"></ul>
                         <div id="list">
-
                             <a href="News.html"><button type="button" class="btn btn-light btn-xs">More Stories</button></a>
                         </div>
                     </div>
-            </div>
 
-
+                </div>
             </section>
 
         </article>
@@ -120,7 +125,7 @@
         <!--========== TRAVEL FORM & GOOGLE MAP ==========-->
 
 
-        <article class="container-md travel">
+        <article class="container-md">
 
             <!-- Section Title -->
             <div class="container-md mt-3 title">
@@ -128,7 +133,7 @@
             </div>
 
             <!-- FORM & MAP CONTAINER-->
-            <div class="container-md">
+            <div class="container-md travel">
                 <div class="row">
 
                     <section class="col-md-6 form">
@@ -150,8 +155,13 @@
 
     </main>
 
-    <br><div><h6 style="text-align: center;">Stories Gathered From The Following API:<a href="https://newsapi.org/"> News API.</a></h6></div>
+    <!--========== Footer Content ==========-->
 
+    <footer>
+        <div class="container mt-3">
+            <h6 style="text-align: center;">Stories Gathered From The Following API:<a href="https://newsapi.org/"> News API.</a></h6>
+        </div>
+    </footer>
 
     <!--========== SCRIPTS ==========-->
 
