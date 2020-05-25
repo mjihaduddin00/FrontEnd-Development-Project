@@ -78,14 +78,14 @@ $(document).ready(function() {
 
     function displayStory(story,storyNum){
         var mainNumber = storyNum;
-        var mainTitle = "<h4>" + story.title + "</h4>";
+        var mainTitle = "<h4 class='mainArticleLink'>" + story.title + "</h4>";
         var mainSource = story.source.name;
         var mainImage = story.urlToImage;
         var mainTime = moment(story.publishedAt).format('MMMM Do, YYYY');
         var mainDescription = story.description;
 
         mainInfo += mainNumber;
-        mainInfo += "<img src='" + mainImage + "' width='522'/>";
+        mainInfo += "<img class='mainArticleImg' src='" + mainImage + "'/>";
         mainInfo += `<a href='${story.url}'>`;
         mainInfo += "<strong>" + mainTitle + "</strong></a>";
         mainInfo += "<br/>" + "<p class='wrap'>" + mainDescription + "</p>";
@@ -100,12 +100,12 @@ $(document).ready(function() {
         var image = story.urlToImage;
         var storyTime = moment(story.publishedAt).format('MMMM Do, YYYY');
 
-        listInfo += "<li onclick='populateDetail(" + number + ")' class='wrap'>";
-        listInfo += "<img src='" + image + "' width='100'/>";
+        listInfo += "<div class='container mb-4 p-3 mainArticleDesc'><li onclick='populateDetail(" + number + ")' class='wrap'>";
+        listInfo += "<img class='listArticleImg' src='" + image + "'>";
         listInfo += `<a href='${story.url}'>`;
         listInfo += "<strong>" + title + "</strong>";
         listInfo += "<br/>" + storyTime + " | Read more at " + source;
-        listInfo += "</a></li>";
+        listInfo += "</a></li></div>";
     }
 
 
