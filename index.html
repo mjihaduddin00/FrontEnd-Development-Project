@@ -103,7 +103,6 @@
 
             <section class="container-md articles">
                 <div class="row">
-<<<<<<< HEAD
                     <div class="col-md-6" id="main">
                         <div id="newest">
 
@@ -119,7 +118,6 @@
                     </div>
 
                     <div class="col-md-6 p-3" id="listings">
->>>>>>> 85bb252f27e8d4f5680e5ad039410c6704d5cb12
                         <ul id="list" data-role="listview"></ul>
                         <div id="list">
                             <a href="News.html"><button type="button" class="btn btn-light btn-xs">More Stories</button></a>
@@ -154,34 +152,42 @@
                     </section>
 
                     <section class="col-md-6 map">
-                        Google Map - CODE HERE
-
-
+                        Google Maps
+                        <div id="googleMap" style="width:100%;height:400px;"></div>
+                        <script>
+                        function myMap() {
+                        var mapProp= {
+                          center:new google.maps.LatLng(51.508742,-0.120850),
+                          zoom:5,
+                        };
+                        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                        }
+                        </script>
                     </section>
-
-                </div>
-            </div>
-
+             </div>
+         </div>
         </article>
 
-    </main>
+        </main>
 
-    <!--========== Footer Content ==========-->
+        <!--========== Footer Content ==========-->
 
-    <footer>
-        <div class="container mt-3">
-            <h6 style="text-align: center;">Stories Gathered From The Following API:<a href="https://newsapi.org/"> News API.</a></h6>
-        </div>
-    </footer>
+        <footer>
+            <div class="container mt-3">
+                <h6 style="text-align: center;">Stories Gathered From The Following API:<a href="https://newsapi.org/"> News API.</a></h6>
+            </div>
+        </footer>
 
-    <!--========== SCRIPTS ==========-->
+        <!--========== SCRIPTS ==========-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
 
-    <script type="text/javascript" src="assets/script.js"></script>
+        <script type="text/javascript" src="assets/script.js"></script>
 
-</body>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnx6Np_a09oinswpciZhv20kuKciThjes&callback=myMap"></script>
 
-</html>
+    </body>
+
+    </html>

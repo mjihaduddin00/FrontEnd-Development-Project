@@ -108,5 +108,5 @@ $(document).ready(function() {
         listInfo += "</a></li></div>";
     }
 
-
 });
+//======================= Google Maps API =======================//
