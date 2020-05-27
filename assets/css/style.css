@@ -1,12 +1,13 @@
 body {
     font-family: "Source Sans Pro", sans-serif;
-    background-color: #151728;
+    background-color: #00081E;
     color: #ccc8db;
     text-align: center;
     margin: auto;
 }
 
 /*------------Header CSS------------*/
+
 #logo {
     width: 400px;
 }
@@ -29,7 +30,13 @@ hr {
     border: 1px solid #272a3a;
 }
 
+.nav {
+    justify-content: center;
+    border: 1px solid #272a3a;
+}
+
 /*------------Main CSS------------*/
+
 section {
     border: 1px solid #272a3a;
 }
@@ -46,10 +53,12 @@ section {
 }
 
 /*------------Covid CSS------------*/
+
 .corona {
     background: url("https://media.giphy.com/media/XbgLOfTPqp0MUc6yYH/giphy.gif");
-    background-position: 7% center;
+    background-position: 5% center;
     background-repeat: no-repeat;
+    background-size: contain;
     background-color: #00081E;
 }
 
@@ -66,8 +75,9 @@ tr {
 }
 
 /*------------News CSS------------*/
-.mainArticleDesc {
-    background-color: #272a3a;
+
+.articles{
+    background-color: #00081E;
 }
 
 .mainArticleLink {
@@ -84,9 +94,28 @@ tr {
     background-color: #337ffe;
 }
 
+.listArticleDesc {
+    border: 1px solid #272a3a;
+    font-size: 12px;
+
+}
+
 .listArticleImg {
-    width: 20%;
+    width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: #337ffe;
+}
+
+/*------------Travel CSS------------*/
+
+.skyscan{
+    background-color: #00081E;
+}
+
+.skytext {
+
+}
+
+.form {
+    background-color: #ffff;
 }

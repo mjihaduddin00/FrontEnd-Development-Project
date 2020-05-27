@@ -14,14 +14,14 @@ $(document).ready(function() {
 
 //======================= Covid Tracker =======================//
 
-$(document).ready(function(){
+$(document).ready(function() {
 
-    function init(){
+    function init() {
         var url = "https://api.covid19api.com/summary"
 
         var data = ''
 
-        $.get(url,function(data){
+        $.get(url, function(data) {
             console.log(data.Global)
 
             data = `
@@ -37,18 +37,18 @@ $(document).ready(function(){
     }
 
 
-    function refreshData(){
+    function refreshData() {
         clearData();
         init();
     }
 
-    function clearData(){
+    function clearData() {
         $("#data").empty()
     }
 
     init();
 
-    $('#refreshCovid').on('click', function(){
+    $('#refreshCovid').on('click', function() {
         refreshData();
     })
 });
@@ -63,20 +63,20 @@ $(document).ready(function() {
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3961be64614d4c1e93003369b9d10207",
         method: "GET"
-    }).then(function (data) {
+    }).then(function(data) {
         console.log(data);
         articles = data.articles;
         displayStory(articles[0]);
         $("#newest").html(mainInfo);
 
-        for(var x =1; x < 5; x++) {
+        for (var x = 1; x < 5; x++) {
             displayList(articles[x]);
             $("#list").html(listInfo);
         }
 
     })
 
-    function displayStory(story){
+    function displayStory(story) {
         var mainTitle = "<h4 class='mainArticleLink'>" + story.title + "</h4>";
         var mainSource = story.source.name;
         var mainImage = story.urlToImage;
@@ -86,24 +86,33 @@ $(document).ready(function() {
         mainInfo += "<img class='mainArticleImg' src='" + mainImage + "'/>";
         mainInfo += `<a href='${story.url}'>`;
         mainInfo += "<strong>" + mainTitle + "</strong></a>";
-        mainInfo += "<br/>" + "<p class='wrap'>" + mainDescription + "</p>";
+        mainInfo += "<hr>" + "<p class='wrap'>" + mainDescription + "</p><hr>";
         mainInfo += `<a href='${story.url}'>`;
-        mainInfo +=  mainTime + " | Read more at " + mainSource + "</a>";
+        mainInfo += mainTime + " | Read more at " + mainSource + "</a>";
     }
 
-    function displayList(story){
+    function displayList(story) {
         var title = story.title;
         var source = story.source.name;
         var image = story.urlToImage;
         var storyTime = moment(story.publishedAt).format('MMMM Do, YYYY');
 
-        listInfo += "<div class='container mb-4 p-3 mainArticleDesc'><li class='wrap'>";
-        listInfo += "<img class='listArticleImg' src='" + image + "'>";
-        listInfo += `<a href='${story.url}'>`;
-        listInfo += "<strong>" + title + "</strong>";
-        listInfo += "<br/>" + storyTime + " | Read more at " + source;
-        listInfo += "</a></li></div>";
+        listInfo += "<div class='container-md'><div class='row mb-4 p-3 listArticleDesc'>";
+        listInfo += "<div class='col-md-4'><img class='listArticleImg' src='" + image + "'></div>";
+        listInfo += `<div class='col-md-8'><a href='${story.url}'>`;
+        listInfo += "<strong>" + title + "</strong><hr>";
+        listInfo += storyTime + " | Read more at " + source;
+        listInfo += "</a></div></div></div>";
     }
 
 });
+
 //======================= Google Maps API =======================//
+
+function myMap() {
+    var mapProp = {
+        center: new google.maps.LatLng(51.508742, -0.120850),
+        zoom: 5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
