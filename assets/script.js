@@ -61,30 +61,28 @@ $(document).ready(function() {
     var articles = [];
 
     $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=82b9aacd881f4e4e90a4b7b4eaf75ae3",
+        url: "https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3961be64614d4c1e93003369b9d10207",
         method: "GET"
     }).then(function (data) {
         console.log(data);
         articles = data.articles;
-        displayStory(articles[0],0);
+        displayStory(articles[0]);
         $("#newest").html(mainInfo);
 
         for(var x =1; x < 5; x++) {
-            displayList(articles[x],x);
+            displayList(articles[x]);
             $("#list").html(listInfo);
         }
 
     })
 
-    function displayStory(story,storyNum){
-        var mainNumber = storyNum;
+    function displayStory(story){
         var mainTitle = "<h4 class='mainArticleLink'>" + story.title + "</h4>";
         var mainSource = story.source.name;
         var mainImage = story.urlToImage;
         var mainTime = moment(story.publishedAt).format('MMMM Do, YYYY');
         var mainDescription = story.description;
 
-        mainInfo += mainNumber;
         mainInfo += "<img class='mainArticleImg' src='" + mainImage + "'/>";
         mainInfo += `<a href='${story.url}'>`;
         mainInfo += "<strong>" + mainTitle + "</strong></a>";
@@ -93,14 +91,13 @@ $(document).ready(function() {
         mainInfo +=  mainTime + " | Read more at " + mainSource + "</a>";
     }
 
-    function displayList(story,storyNum){
-        var number = storyNum;
+    function displayList(story){
         var title = story.title;
         var source = story.source.name;
         var image = story.urlToImage;
         var storyTime = moment(story.publishedAt).format('MMMM Do, YYYY');
 
-        listInfo += "<div class='container mb-4 p-3 mainArticleDesc'><li onclick='populateDetail(" + number + ")' class='wrap'>";
+        listInfo += "<div class='container mb-4 p-3 mainArticleDesc'><li class='wrap'>";
         listInfo += "<img class='listArticleImg' src='" + image + "'>";
         listInfo += `<a href='${story.url}'>`;
         listInfo += "<strong>" + title + "</strong>";
