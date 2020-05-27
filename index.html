@@ -105,9 +105,22 @@
                     </section>
 
                     <section class="col-md weather">
-                        Weather - CODE HERE
-
-
+                        <div class="app-wrap">
+                            <header>
+                                <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
+                            </header>
+                            <main>
+                                <section class="location">
+                                    <div class="city">Chicago, IL</div>
+                                    <div class="date">Saturday 9 May 2020</div>
+                                </section>
+                                <div class="current">
+                                    <div class="temp">46<span>°F</span></div>
+                                    <div class="weather">Sunny</div>
+                                    <div class="hi-low">39°F / 48 °F</div>
+                                </div>
+                            </main>
+                        </div>
                     </section>
 
                 </div>
@@ -170,7 +183,15 @@
 
                     <section class="col-md-8 p-4 map">
                         Google Maps
-                        <div id="googleMap" style="width:100%;height:400px;"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div id="map"></div>
+                              </div>
+                            </div>
+                          </div>
                     </section>
 
                 </div>
@@ -190,6 +211,9 @@
 
     <!--========== SCRIPTS ==========-->
 
+    <!-- WEATHER DASHBOARD SCRIPT -->
+    <script src="assets/Weather.js"></script>
+
     <!-- DATE & TIME SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
@@ -200,7 +224,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- GOOGLE MAPS SCRIPT -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnx6Np_a09oinswpciZhv20kuKciThjes&callback=myMap"></script>
+    <script src="assets/GMA.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz2f9WCxsbPrFsE19CaysNdVhVyJ9EXKM&callback=createMap" async defer></script>
 
     <!-- SKYSCANER SCRIPT -->
     <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>

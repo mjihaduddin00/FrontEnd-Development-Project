@@ -119,3 +119,8 @@ tr {
 .form {
     background-color: #ffff;
 }
+
+/*------------Google Maps API------------*/
+#map {
+    height: 500px;
+  }
