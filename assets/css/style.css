@@ -90,7 +90,6 @@ h2 {
 /*------------Weather CSS------------*/
 .wea {
     background-color: #00081E;
-    border: 1px solid #337ffe;
 }
 
 .searchbox {
@@ -108,13 +107,13 @@ h2 {
 }
 
 .location {
-    color: #ffff;
     font-weight: bolder;
-    background-color: #337ffe;
     padding: 10px 5px 10px 5px;
 }
 
 .city {
+    color: #337ffe;
+    font-size: 25px;
     font-weight: bolder;
     font-kerning: normal;
     text-transform: uppercase;
@@ -140,8 +139,8 @@ h2 {
 /*------------Spotify CSS------------*/
 .spotify {
     border: 1px solid #337ffe;
-    width: 335px;
-    height: 320px;
+    width: 340px;
+    height: 375px;
 }
 
 /*------------News CSS------------*/
@@ -164,6 +163,8 @@ h2 {
 .listArticleDesc {
     border: 1px solid #337ffe;
     font-size: 12px;
+    background-color: #ffff;
+
 }
 
 .listArticleImg {
@@ -181,8 +182,6 @@ h2 {
 .skyscan {
     background-color: #00081E;
 }
-
-.skytext {}
 
 .form {
     background-color: #ffff;
