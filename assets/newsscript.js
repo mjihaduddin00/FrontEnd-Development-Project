@@ -31,13 +31,13 @@ $(document).ready(function(){
     })
 
     function displayStory(story){
-        var mainTitle = "<h4>" + story.title + "</h4>";
+        var mainTitle = "<h4 class='mainArticleLink'>" + story.title + "</h4>";
         var mainSource = story.source.name;
         var mainImage = story.urlToImage;
         var mainTime = moment(story.publishedAt).format('MMMM Do, YYYY');
         var mainDescription = story.description;
 
-        mainInfo += "<img src='" + mainImage + "' width='400'/>";
+        mainInfo += "<img class='mainArticleImg' src='" + mainImage + "'/>";
         mainInfo += `<a href='${story.url}'>`;
         mainInfo += "<strong>" + mainTitle + "</strong></a>";
         mainInfo += "<br/>" + "<p class='wrap'>" + mainDescription + "</p>";
@@ -51,8 +51,8 @@ $(document).ready(function(){
         var image = story.urlToImage;
         var storyTime = moment(story.publishedAt).format('MMMM Do, YYYY');
 
-        listInfo += "<li class='wrap'>";
-        listInfo += "<img src='" + image + "' width='100'/>";
+        listInfo += "<div class='container mb-4 p-3 mainArticleDesc'><li class='wrap'>";
+        listInfo += "<img class='listArticleImg' src='" + image + "'>";
         listInfo += `<a href='${story.url}'>`;
         listInfo += "<strong>" + title + "</strong>";
         listInfo += "<br/>" + storyTime + " | Read more at " + source;
@@ -60,13 +60,13 @@ $(document).ready(function(){
     }
 
     function displayStorySec(story){
-        var mainTitleSec = "<h4>" + story.title + "</h4>";
+        var mainTitleSec = "<h4 class='mainArticleLink'>" + story.title + "</h4>";
         var mainSourceSec = story.source.name;
         var mainImageSec = story.urlToImage;
         var mainTimeSec = moment(story.publishedAt).format('MMMM Do, YYYY');
         var mainDescriptionSec = story.description;
 
-        mainInfoSec += "<img src='" + mainImageSec + "' width='400'/>";
+        mainInfoSec += "<img class='mainArticleImg' src='" + mainImageSec + "' width='400'/>";
         mainInfoSec += `<a href='${story.url}'>`;
         mainInfoSec += "<strong>" + mainTitleSec + "</strong></a>";
         mainInfoSec += "<br/>" + "<p class='wrap'>" + mainDescriptionSec + "</p>";
@@ -80,8 +80,8 @@ $(document).ready(function(){
         var imageSec = story.urlToImage;
         var storyTimeSec = moment(story.publishedAt).format('MMMM Do, YYYY');
 
-        listInfoSec += "<li class='wrap'>";
-        listInfoSec += "<img src='" + imageSec + "' width='100'/>";
+        listInfoSec += "<div class='container mb-4 p-3 mainArticleDesc'><li class='wrap'>";
+        listInfoSec += "<img class='listArticleImg' src='" + imageSec + "'>";
         listInfoSec += `<a href='${story.url}'>`;
         listInfoSec += "<strong>" + titleSec + "</strong>";
         listInfoSec += "<br/>" + storyTimeSec + " | Read more at " + sourceSec;
