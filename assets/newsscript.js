@@ -110,40 +110,39 @@ $(document).ready(function(){
         $("#results").empty();
     }
 
-    $('#button-addon2').on('click', function(){
-        emptyContent();
-        var userInput = $('#input').val();        
-    
+    function getResults(){
+        var userInput = $("#input").val();        
         $.ajax({
             url: `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${userInput}&apiKey=3961be64614d4c1e93003369b9d10207`,
             method: "GET"
         }).then(function (response) {
             console.log(response);
             userSearch = response.articles;
+            
+            try {
+                if(response.totalResults === 0) throw "No results found. Please try another search.";
+            }
+            catch(err){
+                $("#results").html(err)
+            }
             for(var x = 0; x < userSearch.length; x++) {
                 displayResults(userSearch[x]);
-                $("#results").html(resultInfo);
-            }
-        })    
+                $("#results").html(resultInfo);   
+            }         
+        })
+        var userInput = $("#input").val("");  
+    }
+
+    $("#button-addon2").on("click", function(){
+        emptyContent();
+        getResults();
     });
 
-    $('#input').keydown(function(event){
+    $("#input").keydown(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
+        if(keycode == "13"){
             emptyContent();
-            var userInput = $('#input').val();        
-        
-            $.ajax({
-                url: `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${userInput}&apiKey=3961be64614d4c1e93003369b9d10207`,
-                method: "GET"
-            }).then(function (response) {
-                console.log(response);
-                userSearch = response.articles;
-                for(var x = 0; x < userSearch.length; x++) {
-                    displayResults(userSearch[x]);
-                    $("#results").html(resultInfo);
-                }
-            }) 
-        }   
+            getResults();        
+        }
     });
 });
