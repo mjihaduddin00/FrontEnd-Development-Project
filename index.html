@@ -115,25 +115,23 @@
                     <section class="col-md-4 wea">
                         <!--WEATHER CONTAINER-->
                         <div class="container mt-3 mb-3 p-3 wea-data">
-                            <div class="searchbg">
-                                <input class="searchbox" type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
-                            </div>
-                            <div class="container location">
-                                <div class="city">Chicago, IL</div>
-                                <!-- <div class="date">Saturday 9 May 2020</div> -->
-                            </div>
-                            <div class="allcity-data">
-                                <div class="container current">
-                                    <div class="row">
-                                        <div class="col-md-6 mr-2 temp">46<span>°F</span></div>
-                                        <div class="col-md-5 mt-2">
-                                            <div class="weather">Sunny</div>
-                                            <div class="hi-low">39°F / 48°F</div>
-                                        </div>
-                                    </div>
+                        <div class="app-wrap">
+                            <header>
+                                <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
+                            </header>
+                            <main>
+                                <section class="location">
+                                    <div class="city">Chicago, IL</div>
+                                    <div class="date">Saturday 9 May 2020</div>
+                                </section>
+                                <div class="current">
+                                    <div class="temp">46<span>°F</span></div>
+                                    <div class="weather">Sunny</div>
+                                    <div class="hi-low">39°F / 48 °F</div>
                                 </div>
-                            </div>
+                            </main>
                         </div>
+                    </div>
 
                         <!--SPOTIFY WIDGET-->
                         <iframe class="mb-3 spotify" src="https://open.spotify.com/embed/playlist/4l1gy3h0r9BV5lMLGNT294" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -235,7 +233,7 @@
 
 
     <!--========== SCRIPTS ==========-->
-    
+
     <!-- DATE & TIME SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
