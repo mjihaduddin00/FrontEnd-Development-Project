@@ -42,6 +42,8 @@
 
                 </div>
             </div>
+
+            <!--========== NAVBAR CONTAINER ==========-->
             <hr>
             <div class="container-md mb-3 nav">
                 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -57,6 +59,7 @@
                             <li class="nav-item"><a class="nav-link" href="#">Politics</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Cars</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Science</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Arts</a></li>
@@ -65,6 +68,7 @@
                             <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Travel</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Gaming</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -75,20 +79,23 @@
 
     <main>
 
-        <!--========== CORONA VIRUS & WEATHER GIP ==========-->
+        <!--========== LIVE UPDATES ==========-->
 
         <article class="container-md">
 
-            <!-- COVID & WEATHER CONTAINER-->
+            <!--COVID, WEATHER & SPOTIFY CONTAINER-->
             <div class="container-md live">
                 <div class="row">
 
-                    <section class="col-md-7 mr-3 corona">
-                        <div class="container mt-4 mb-4 p-3 covid-data">
-                            <h2 class="text-center mb-2">Live Data: COVID-19</h2>
+                    <!--COVID CONTAINER-->
+                    <section class="col-md-8 corona">
+                        <!-- <h2 class="text-center mt-3 mb-3">[ LIVE DATA - COVID-19 ]</h2> -->
+                        <img class="mt-3" id="cora" src="https://assets.vogue.com/photos/5e6fe788846abf0008752630/16:9/w_1280,c_limit/01Story-CoronavirusUpdates.png" alt="Logo">
+
+                        <div class="container mb-3 p-3 covid-data">
                             <table class="table">
-                                <thead class="thead-dark text-center">
-                                    <tr>
+                                <thead class="thead text-center">
+                                    <tr class="covidDataType">
                                         <th scope="col">Cases</th>
                                         <th scope="col">Deaths</th>
                                         <th scope="col">Recovered</th>
@@ -98,31 +105,34 @@
                                     <tr id="data"></tr>
                                 </tbody>
                             </table>
-                            <button id="refreshCovid" class="btn btn-danger btn-block">
+                            <button id="refreshCovid" class="btn btn-secondary btn-block">
                                 Refresh Data
                             </button>
                         </div>
                     </section>
 
-                    <section class="col-md weather">
-                        <div class="app-wrap">
-                            <header>
-                                <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
-                            </header>
-                            <main>
-                                <section class="location">
-                                    <div class="city">Chicago, IL</div>
-                                    <div class="date">Saturday 9 May 2020</div>
-                                </section>
-                                <div class="current">
+                    <section class="col-md-4 wea">
+                        <!--WEATHER CONTAINER-->
+                        <div class="container mt-3 mb-3 p-3 wea-data">
+                            <div class="searchbg">
+                                <input class="searchbox" type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
+                            </div>
+                            <div class="container location">
+                                <div class="city">Chicago, IL</div>
+                                <!-- <div class="date">Saturday 9 May 2020</div> -->
+                            </div>
+                            <div class="mt-3 allcity-data">
+                                <div class="mt-2 current">
                                     <div class="temp">46<span>°F</span></div>
                                     <div class="weather">Sunny</div>
-                                    <div class="hi-low">39°F / 48 °F</div>
+                                    <div class="hi-low">39°F / 48°F</div>
                                 </div>
-                            </main>
+                            </div>
                         </div>
-                    </section>
 
+                        <!--SPOTIFY WIDGET-->
+                        <iframe class="spotify" src="https://open.spotify.com/embed/playlist/4l1gy3h0r9BV5lMLGNT294" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </section>
                 </div>
             </div>
         </article>
@@ -139,22 +149,24 @@
             </div>
 
             <!-- NEWS CONTAINER-->
-
             <section class="container-md articles">
                 <div class="row">
 
-                    <div class="col-md-6 my-3 mainArticle">
-                        <div class="container p-4 mainArticleDesc">
+                    <!--MAIN ARTICLE CONTAINER-->
+                    <div class="col-md-6 mt-4 mb-4 mainArticle">
+                        <div class="container mainArticleDesc">
                             <div id="newest"></div>
                         </div>
                     </div>
 
-
-                    <div class="col-md-6 p-3">
+                    <!--LIST ARTICLES CONTAINER-->
+                    <div class="col-md-6 mt-4 mb-4">
                         <ul id="list" data-role="listview"></ul>
-                        <a href="newsindex.html"><button type="button" class="btn btn-light btn-xs">More Stories</button></a>
                     </div>
 
+                    <div class="container-md mt-4 mb-4">
+                        <a href="newsindex.html"><button type="button" class="btn btn-outline-primary btn-block">More Stories</button></a>
+                    </div>
                 </div>
             </section>
 
@@ -170,28 +182,36 @@
             <div class="container-md mt-3 title">
                 Travel
             </div>
+
             <!-- FORM & MAP CONTAINER-->
             <div class="container-md travel">
                 <div class="row">
 
+                    <!-- FORM CONTAINER-->
                     <section class="col-md-4 pb-3 skyscan">
-                        <hr>
+                        <div class="container-md pt-3">
+                            <img id="skylogo" src="https://theme.zdassets.com/theme_assets/301966/2871c8c2b0d5f0e735b6697e2f9b93b98d36171a.png" alt="Logo">
+                        </div>
                         <p class="skytext">Find the best options across flights, hotels, and car rentals to book the perfect trip.</p>
                         <hr>
+                        <div class="embed-responsive embed-responsive-16by9 mt-3">
+                            <iframe src="https://player.vimeo.com/video/360098614?color=0770E3&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
                         <div class="p-4 form" data-skyscanner-widget="SearchWidget" data-locale="en-GB" data-market="GB" data-currency="GBP"></div>
                     </section>
 
-                    <section class="col-md-8 p-4 map">
-                        Google Maps
-                        <div class="container-fluid">
+                    <!--MAP CONTAINER-->
+                    <section class="col-md-8 p-4 google">
+                        <div class="container-md pt-2 goobox">
+                            <img id="gooheader" src="https://www.freepngimg.com/thumb/google/66964-google-platform-maps-suite-logo-cloud.png" alt="Logo">
+                        </div>
+                        <div class="container-fluid p-2 mapbox">
                             <div class="row">
+                                <div class="col">
+                                    <div id="map"></div>
+                                </div>
                             </div>
-                            <div class="row">
-                              <div class="col">
-                                <div id="map"></div>
-                              </div>
-                            </div>
-                          </div>
+                        </div>
                     </section>
 
                 </div>
@@ -211,9 +231,6 @@
 
     <!--========== SCRIPTS ==========-->
 
-    <!-- WEATHER DASHBOARD SCRIPT -->
-    <script src="assets/Weather.js"></script>
-
     <!-- DATE & TIME SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
@@ -224,7 +241,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- GOOGLE MAPS SCRIPT -->
-    <script src="assets/GMA.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz2f9WCxsbPrFsE19CaysNdVhVyJ9EXKM&callback=createMap" async defer></script>
 
     <!-- SKYSCANER SCRIPT -->

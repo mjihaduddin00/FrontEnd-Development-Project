@@ -7,7 +7,6 @@ body {
 }
 
 /*------------Header CSS------------*/
-
 #logo {
     width: 400px;
 }
@@ -27,23 +26,28 @@ body {
 }
 
 hr {
-    border: 1px solid #272a3a;
+    border: 1px solid #337ffe;
 }
 
 .nav {
     justify-content: center;
-    border: 1px solid #272a3a;
+    border: 1px solid #337ffe;
+    background-color: #00081E;
+}
+
+.navbar-toggler {
+    position: relative;
+    left: 25%;
 }
 
 /*------------Main CSS------------*/
-
 section {
-    border: 1px solid #272a3a;
+    border: 1px solid #337ffe;
 }
 
 .title {
     background-color: #337ffe;
-    border: 1px solid #272a3a;
+    border: 1px solid #337ffe;
     font-weight: bolder;
     font-kerning: normal;
     text-align: left;
@@ -53,37 +57,101 @@ section {
 }
 
 /*------------Covid CSS------------*/
-
 .corona {
-    background: url("https://media.giphy.com/media/XbgLOfTPqp0MUc6yYH/giphy.gif");
-    background-position: 5% center;
-    background-repeat: no-repeat;
-    background-size: contain;
     background-color: #00081E;
+}
+
+#cora {
+    background-color: white;
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+    border: 1px solid #272a3a;
 }
 
 .covid-data {
-    float: right;
-    background-color: #00081E;
+    background-color: #ffff;
     border: 1px solid #272a3a;
-    border-radius: 5px;
-    width: 375px;
 }
 
-tr {
-    background-color: white;
+h2 {
+    color: #337ffe;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.covidDataType {
+    color: #337ffe;
+    font-weight: bolder;
+    font-kerning: normal;
+    text-transform: uppercase;
+}
+
+/*------------Weather CSS------------*/
+.wea {
+    background-color: #00081E;
+    border: 1px solid #337ffe;
+}
+
+.searchbox {
+    width: 100%;
+}
+
+.wea-data {
+    background-color: #ffff;
+    border: 1px solid #272a3a;
+    width: inherit;
+}
+
+.allcity-data {
+    color: black;
+}
+
+.location {
+    color: #ffff;
+    font-weight: bolder;
+    background-color: #337ffe;
+    padding: 10px 5px 10px 5px;
+}
+
+.city {
+    font-weight: bolder;
+    font-kerning: normal;
+    text-transform: uppercase;
+}
+
+.current {
+    color: #ffff;
+    background-color: #337ffe;
+}
+
+.temp {
+    font-size: 50px;
+    font-weight: bolder;
+    font-kerning: normal;
+    text-transform: uppercase;
+}
+
+.weather {
+    font-size: 20px;
+    font-kerning: normal;
+}
+
+/*------------Spotify CSS------------*/
+.spotify {
+    border: 1px solid #337ffe;
+    width: 335px;
+    height: 320px;
 }
 
 /*------------News CSS------------*/
-
-.articles{
+.articles {
     background-color: #00081E;
 }
 
 .mainArticleLink {
-    background-color: #337ffe;
-    color: white;
-    font-weight: bold;
+    background-color: #ffff;
+    color: #00081E;
     padding: 18px;
 }
 
@@ -91,36 +159,53 @@ tr {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: #337ffe;
 }
 
 .listArticleDesc {
-    border: 1px solid #272a3a;
+    border: 1px solid #337ffe;
     font-size: 12px;
-
 }
 
 .listArticleImg {
     width: 100%;
     height: 100%;
+    float: left;
     object-fit: contain;
 }
 
 /*------------Travel CSS------------*/
+#skylogo {
+    width: 200px;
+}
 
-.skyscan{
+.skyscan {
     background-color: #00081E;
 }
 
-.skytext {
-
-}
+.skytext {}
 
 .form {
     background-color: #ffff;
 }
 
 /*------------Google Maps API------------*/
+.google {
+    background-color: #00081E;
+}
+
+.goobox {
+    background-color: white;
+}
+
+#gooheader {
+    width: 40%;
+    object-fit: contain;
+}
+
+.mapbox {
+    background-color: white;
+}
+
 #map {
-    height: 500px;
-  }
+    height: 542px;
+}
